@@ -1,0 +1,135 @@
+.about {
+  height: 100vh;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 30rem;
+}
+
+.about h2 {
+  text-align: center;
+}
+
+.about-me {
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+}
+.about-me img {
+  width: 100%;
+  width: 300px;
+  border: 2px solid #1e90c2;
+  border-radius: 50%;
+}
+
+.about-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.about-info p {
+  line-height: 2;
+  font-size: 18px;
+  margin-bottom: 3rem;
+}
+.about-info h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10rem;
+}
+
+.about__content-title {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.about__content-details-para {
+  font-size: 1.8rem;
+  color: grey;
+  max-width: 60rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.about__content-details-para--hl {
+  font-weight: 700;
+  margin: 0 3px;
+}
+.about__content-details-para:last-child {
+  margin-bottom: 4rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+.skills__skill {
+  padding: 1rem 2rem;
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+  font-size: 1rem;
+  background: rgba(153, 153, 153, 0.2);
+  border-radius: 5px;
+  font-weight: 600;
+  color: #777;
+}
+
+.skills__skill:hover{
+  border: none;
+  background: #1e90c2;
+  background: linear-gradient(25deg, #1e90c2 0%, #1b4388 100%);
+  color: #fff;
+}
+
+.about-btn {
+  text-decoration: none;
+  border: 1px solid #1e90c2;
+  padding: 25px 50px;
+  border-radius: 0.5rem;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.about-btn:hover {
+  border: none;
+  background: #1e90c2;
+  background: linear-gradient(25deg, #1e90c2 0%, #1b4388 100%);
+  color: #fff;
+}
+
+@media screen and (max-width: 490px) {
+  .about {
+    height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 60rem;
+  }
+
+  .about h2 {
+    margin-top: 1rem;
+  }
+  .about-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
