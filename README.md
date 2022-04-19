@@ -1,7 +1,7 @@
-# Freedom Bird Travel Guide
+# Freedom Bird Tour Guide
 
 ### It's a simple React base Web App.
-### Here you can see A Travel Guide & His services.
+### Here you can see A Tour Guide & His services.
 ----
 ## The following things in this project:
 
@@ -14,16 +14,16 @@
 * Footer
 * Other's data.
 ----
-### You can see me here.. [Click Me](https://independent-service-prov-781fb.web.app/)
+### You can see me here.. [Click Me](https://freedom-bird-tour-guide.web.app/)
 
 ## Installation
 
 ```bash
-git clone https://github.com/programming-hero-web-course-4/independent-service-provider-kiron0.git
+git clone https://github.com/kiron0/freedom-bird-tour-guide.git
 ```
 
 ```bash
-cd independent-service-provider-kiron0
+cd freedom-bird-tour-guide
 ```
 
 ```bash
