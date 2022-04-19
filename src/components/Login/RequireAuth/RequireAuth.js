@@ -1,9 +1,9 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Navigate, useLocation } from "react-router-dom";
-import { auth } from "../../Firebase/Firebase.init";
-import EmailVerifiedAuth from "../Shared/EmailVerifiedAuth/EmailVerifiedAuth";
-import Loading from "../Shared/Loading/Loading";
+import Loading from "../../Shared/Loading/Loading";
+import { auth } from "../../../Firebase/Firebase.init";
+import EmailVerifiedAuth from "../EmailVerifiedAuth/EmailVerifiedAuth";
 
 const RequireAuth = ({ children }) => {
   const [user, loading] = useAuthState(auth);
@@ -16,7 +16,7 @@ const RequireAuth = ({ children }) => {
   }
 
   if (!user.emailVerified) {
-    return <EmailVerifiedAuth></EmailVerifiedAuth>
+    return <EmailVerifiedAuth></EmailVerifiedAuth>;
   }
   return children;
 };
