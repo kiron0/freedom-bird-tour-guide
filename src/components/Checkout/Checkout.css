@@ -77,15 +77,21 @@
   background-color: rgba(255, 153, 0, 0.5);
 }
 
-.success {
-  margin: 40% 20%;
-  background: #fff;
-  padding: 3rem;
-  border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
-    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
-    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+.shipment{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  margin-bottom: 3rem;
 }
+
+.shipment img{
+  width: 100vw;
+  height: 100vh;
+}
+
 @media screen and (max-width: 490px) {
   .form-container {
     max-width: 90%;
@@ -116,6 +122,10 @@
     margin: 70% 5%;
     padding: 3rem;
   }
+  .shipment img{
+    height: 65vh;
+    width: 50vh;
+  }
 }
 
 @media screen and (min-width: 776px) {
@@ -130,6 +140,9 @@
     margin-left: .5rem;
     margin-top: 1.5rem;
     margin-bottom: -5rem;
+  }
+  .shipment img{
+    width: 100%;
   }
 }
 
@@ -146,5 +159,8 @@
     margin-left: .5rem;
     margin-top: 1.5rem;
     margin-bottom: -5rem;
+  }
+  .shipment img{
+    width: 50%;
   }
 }
