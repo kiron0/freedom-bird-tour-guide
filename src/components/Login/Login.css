@@ -58,7 +58,7 @@
   text-align: center;
 }
 
-.form input {
+.form input:not([type="checkbox"]) {
   background-color: transparent;
   border: 2px solid gray;
   padding: 12px 15px;
@@ -70,6 +70,10 @@
 
 .form input:hover{
   border: 2px solid #1e90c2;
+}
+
+.checkbox{
+  margin-left: -4rem;
 }
 
 .container-main-form {

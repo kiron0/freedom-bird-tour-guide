@@ -1,9 +1,11 @@
 import React from "react";
+import PageTitle from "../Shared/PageTitle/PageTitle";
 import "./Blogs.css";
 
 const Blogs = () => {
   return (
     <div className="blogs" id="home">
+      <PageTitle title="Blogs"></PageTitle>
       <div className="blogs-info">
         <h2>Frequently Asked Questions</h2>
         <h4>

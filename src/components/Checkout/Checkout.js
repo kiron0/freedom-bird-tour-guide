@@ -3,6 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { BsFillSuitHeartFill } from "react-icons/bs";
 import { FaRegKissWinkHeart } from "react-icons/fa";
 import { auth } from "../../Firebase/Firebase.init";
+import PageTitle from "../Shared/PageTitle/PageTitle";
 import "./Checkout.css";
 
 const Checkout = () => {
@@ -35,6 +36,7 @@ const Checkout = () => {
 
   return (
     <div className="checkout">
+      <PageTitle title="Blogs"></PageTitle>
       {val ? (
         <div className="form-container">
           <div>
@@ -94,7 +96,10 @@ const Checkout = () => {
       ) : (
         <>
           <div className="text-center success">
-            <h1>Thank you, <FaRegKissWinkHeart/> Sir/Madam For Booking Our Services... <BsFillSuitHeartFill/></h1>
+            <h1>
+              Thank you, <FaRegKissWinkHeart /> Sir/Madam For Booking Our
+              Services... <BsFillSuitHeartFill />
+            </h1>
           </div>
         </>
       )}

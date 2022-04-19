@@ -1,65 +1,66 @@
 import "./Login.css";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
-  useAuthState,
   useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import { auth } from "../../Firebase/Firebase.init";
 import Loading from "../Shared/Loading/Loading";
+import PageTitle from "../Shared/PageTitle/PageTitle";
 
 const Login = () => {
-  const [user] = useAuthState(auth);
-  const [signInWithEmailAndPassword, user1, loading, error] =
-    useSignInWithEmailAndPassword(auth);
-
-  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
   const emailRef = useRef("");
   const passwordRef = useRef("");
   const navigate = useNavigate();
 
   const location = useLocation();
 
-  const [forEmail, setForEmail] = useState(false);
-
   let from = location.state?.from?.pathname || "/";
 
   let errorElement;
-  if (loading || sending) {
-    return <Loading />;
+
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+  if (user) {
+    navigate(from, { replace: true });
   }
+  if (error) {
+    errorElement = <p className="text-danger">{error?.message}</p>;
+  }
+  if (loading || sending) {
+    return <Loading></Loading>;
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
+
     signInWithEmailAndPassword(email, password);
-    if (email !== "") {
-      setForEmail(email);
-    }
   };
 
-  if (error) {
-    errorElement = <p className="text-danger my-3">Error: {error?.message}</p>;
-  }
+  const navigateRegister = () => {
+    navigate("/register");
+  };
 
   const resetPassword = async () => {
     const email = emailRef.current.value;
     if (email) {
       await sendPasswordResetEmail(email);
-      toast("Sent email");
+      toast("Email Sent!");
     } else {
-      toast("please enter your email address");
+      toast("Type Your Email First!");
     }
   };
-
-  if (user) {
-    navigate(from, { replace: true });
-  }
   return (
     <div className="form-body">
+      <PageTitle title="Login"></PageTitle>
       <div className="container-main-form " id="container">
         <div className="form-container-section log-in-container">
           <form onSubmit={handleSubmit} className="form">
@@ -90,8 +91,11 @@ const Login = () => {
             <p>
               New Here ?{" "}
               <span>
-                <Link className="text-primary" to="/signup">
-                  Signup
+                <Link
+                  className="text-primary"
+                  to="/signup"
+                  onClick={navigateRegister}
+                >Signup
                 </Link>
               </span>
             </p>
@@ -103,6 +107,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
