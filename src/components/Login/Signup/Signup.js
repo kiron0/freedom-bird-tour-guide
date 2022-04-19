@@ -6,9 +6,9 @@ import {
 } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { auth } from "../../Firebase/Firebase.init";
-import Loading from "../Shared/Loading/Loading";
-import PageTitle from "../Shared/PageTitle/PageTitle";
+import { auth } from "../../../Firebase/Firebase.init";
+import Loading from "../../Shared/Loading/Loading";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Register = () => {

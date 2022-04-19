@@ -4,7 +4,7 @@ import React from "react";
 const Loading = () => {
   return (
     <div style={{height: '100vh'}} className="w-100 d-flex justify-content-center align-items-center">
-      <Button variant="dark" disabled>
+      <Button variant="primary" disabled>
         <Spinner
           as="span"
           animation="grow"

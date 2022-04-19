@@ -6,9 +6,9 @@ import {
   IoIosCloseCircleOutline,
 } from "react-icons/io";
 import "./Services.css";
-import travel1 from "../../Assets/Image/01.jpg";
-import travel2 from "../../Assets/Image/02.jpg";
-import travel3 from "../../Assets/Image/04.jpg";
+import travel1 from "../../../Assets/Image/01.jpg";
+import travel2 from "../../../Assets/Image/02.jpg";
+import travel3 from "../../../Assets/Image/04.jpg";
 
 const Services = () => {
   const navigate = useNavigate();

@@ -8,7 +8,7 @@ import {
   useSignInWithFacebook,
 } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
-import { auth } from "../../Firebase/Firebase.init";
+import { auth } from "../../../Firebase/Firebase.init";
 
 const SocialLogin = () => {
   const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);

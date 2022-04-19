@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
-import Tour from '../../Assets/Image/tour.jpg'
-import PageTitle from "../Shared/PageTitle/PageTitle";
+import Tour from '../../../Assets/Image/tour.jpg'
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 const Home = () => {
   return (

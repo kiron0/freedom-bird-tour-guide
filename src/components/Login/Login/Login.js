@@ -7,9 +7,9 @@ import {
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
 import { ToastContainer, toast } from "react-toastify";
-import { auth } from "../../Firebase/Firebase.init";
-import Loading from "../Shared/Loading/Loading";
-import PageTitle from "../Shared/PageTitle/PageTitle";
+import { auth } from "../../../Firebase/Firebase.init";
+import Loading from "../../Shared/Loading/Loading";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 const Login = () => {
   const emailRef = useRef("");
