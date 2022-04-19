@@ -52,6 +52,7 @@ const Register = () => {
           <form onSubmit={handleRegister} className="form">
             <h1>Sign Up</h1>
             <SocialLogin />
+            {errorElem}
             <span>or create your account</span>
             <input
               ref={nameRef}
@@ -93,7 +94,6 @@ const Register = () => {
                 </Link>
               </span>
             </p>
-            <span>{errorElem}</span>
           </form>
         </div>
         <div className="overlay-container">

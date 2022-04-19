@@ -30,9 +30,9 @@ const SocialLogin = () => {
   };
   if (error1 || error2 || error3) {
     errorElem = (
-      <p>
+      <span className="text-danger">
         {error3?.message} {error2?.message} {error1?.message}
-      </p>
+      </span>
     );
   }
   if (loading1 || loading2 || loading3) {

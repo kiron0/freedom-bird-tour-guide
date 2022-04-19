@@ -97,7 +97,7 @@ const Checkout = () => {
         <>
           <div className="text-center success">
             <h1>
-              Thank you, <FaRegKissWinkHeart /> Sir/Madam For Booking Our
+              Thank you, Sir/Madam For Booking Our
               Services... <BsFillSuitHeartFill />
             </h1>
           </div>

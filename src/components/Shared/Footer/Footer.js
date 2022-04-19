@@ -32,9 +32,9 @@ const Footer = () => {
             href="#!"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="codepen"
+            aria-label="youtube"
           >
-            <i className="fa fa-codepen"></i>
+            <i className="fa fa-youtube"></i>
           </a>
           <a
             href="#!"

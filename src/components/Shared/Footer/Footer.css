@@ -56,8 +56,8 @@
 .social-links a:hover .fa-linkedin {
   color: #4875b4;
 }
-.social-links a:hover .fa-codepen {
-  color: #212121;
+.social-links a:hover .fa-youtube {
+  color: rgb(214, 22, 22);
 }
 .back-to-top i {
   color: #fff;

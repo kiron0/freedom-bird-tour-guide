@@ -62,14 +62,14 @@ const Blogs = () => {
           </span>
         </p>
         <p className="m-1">
-          <span className="fw-bold">Back4App</span>{" "}
+          <span className="fw-bold">Back4App:</span>{" "}
           <span>
             Back4App is an open source, low code, backend alternative to
             Firebase
           </span>{" "}
         </p>
         <p className="m-1">
-          <span className="fw-bold">AWS Amplify.</span>{" "}
+          <span className="fw-bold">AWS Amplify:</span>{" "}
           <span>
             AWS is a cloud platform by Amazon that provides a set of tools and
             services,

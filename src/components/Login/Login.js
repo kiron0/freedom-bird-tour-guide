@@ -66,6 +66,7 @@ const Login = () => {
           <form onSubmit={handleSubmit} className="form">
             <h1>Login</h1>
             <SocialLogin />
+            {errorElement}
             <span>or use your account</span>
             <input required ref={emailRef} type="email" placeholder="Email" />
             <input
@@ -84,7 +85,6 @@ const Login = () => {
                 Reset
               </Link>
             </p>
-            {errorElement}
             <button className="login-btn" type="submit">
               Log In
             </button>
