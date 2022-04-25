@@ -27,6 +27,7 @@ const Checkout = () => {
     event.preventDefault();
     toast('Thanks for order!')
     const shipping = { name, email, address, phone };
+    console.log(shipping);
     setVal(false);
   };
 

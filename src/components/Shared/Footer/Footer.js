@@ -57,7 +57,7 @@ const Footer = () => {
         <p className="footer__text">
           &copy; {year}<span id="year"></span> Copyright by Freedom Bird Tour Guide{" "}|{" "}
           <a
-            href="https://github.com/0kiron"
+            href="https://github.com/kiron0"
             target="_blank"
             rel="noopener noreferrer"
           >
