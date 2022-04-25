@@ -1,6 +1,6 @@
 import React from "react";
 import { useSendEmailVerification } from "react-firebase-hooks/auth";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import { auth } from "../../../Firebase/Firebase.init";
 import './EmailVerifiedAuth.css'
 
@@ -15,12 +15,11 @@ const EmailVerifiedAuth = () => {
         className="verified-btn"
         onClick={async () => {
           await sendEmailVerification();
-          toast("Sent email");
+          toast("Sent email verification");
         }}
       >
         Send Verification Email Again
       </button>
-      <ToastContainer></ToastContainer>
     </div>
   );
 };

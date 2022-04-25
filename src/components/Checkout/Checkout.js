@@ -4,19 +4,16 @@ import { auth } from "../../Firebase/Firebase.init";
 import PageTitle from "../Shared/PageTitle/PageTitle";
 import "./Checkout.css";
 import Thanks from "../../Assets/thank-you.jpg";
+import { toast } from "react-toastify";
 
 const Checkout = () => {
   const [user] = useAuthState(auth);
-  const [name, setName] = useState("");
+  const [name] = useState("");
   const [email] = useState("");
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
   const [error] = useState("");
   const [val, setVal] = useState(true);
-
-  const handleNameBlur = (event) => {
-    setName(event.target.value);
-  };
 
   const handleAddressBlur = (event) => {
     setAddress(event.target.value);
@@ -28,8 +25,8 @@ const Checkout = () => {
 
   const handleCreateUser = (event) => {
     event.preventDefault();
+    toast('Thanks for order!')
     const shipping = { name, email, address, phone };
-    console.log(shipping);
     setVal(false);
   };
 
@@ -44,7 +41,8 @@ const Checkout = () => {
               <div className="input-group">
                 <label htmlFor="name">Your Name</label>
                 <input
-                  onBlur={handleNameBlur}
+                  value={user?.displayName}
+                  readOnly
                   type="text"
                   name="name"
                   id=""
