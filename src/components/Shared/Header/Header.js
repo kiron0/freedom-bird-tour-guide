@@ -6,7 +6,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../../Firebase/Firebase.init";
 import CustomLink from "../../CustomLink/CustomLink";
 import { RiMenu4Fill } from "react-icons/ri";
-import {MdTravelExplore} from 'react-icons/md'
+import { MdTravelExplore } from "react-icons/md";
 
 const Header = () => {
   const [user] = useAuthState(auth);
@@ -16,31 +16,31 @@ const Header = () => {
     signOut(auth);
   };
 
-  const changeBackground = () =>{
-    if(window.scrollY >= 100){
+  const changeBackground = () => {
+    if (window.scrollY >= 100) {
       setNavbar(true);
+    } else {
+      setNavbar(false);
     }
-      else{
-        setNavbar(false);
-      }
-  }
+  };
 
-  window.addEventListener('scroll', changeBackground);
+  window.addEventListener("scroll", changeBackground);
 
   return (
     <>
       <Navbar
-      // bg="light"
+        // bg="light"
         sticky="top"
         expand="lg"
         collapseOnSelect
         variant="light"
-        className={navbar ? 'navbar active' : 'navbar'}
+        className={navbar ? "navbar active" : "navbar"}
       >
         <Container>
           <Navbar.Brand>
             <CustomLink to="/" className="fs-3 title">
-             <MdTravelExplore className="logo"></MdTravelExplore> Freedom Bird Tour
+              <MdTravelExplore className="logo"></MdTravelExplore> Freedom Bird
+              Tour
             </CustomLink>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
