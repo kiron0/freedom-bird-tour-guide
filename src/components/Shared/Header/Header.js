@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import "./Header.css";
 import { signOut } from "firebase/auth";
@@ -10,21 +10,32 @@ import {MdTravelExplore} from 'react-icons/md'
 
 const Header = () => {
   const [user] = useAuthState(auth);
-  console.log(user);
+  const [navbar, setNavbar] = useState(false);
 
   const handleLogout = () => {
     signOut(auth);
   };
 
+  const changeBackground = () =>{
+    if(window.scrollY >= 100){
+      setNavbar(true);
+    }
+      else{
+        setNavbar(false);
+      }
+  }
+
+  window.addEventListener('scroll', changeBackground);
+
   return (
     <>
       <Navbar
-        bg="white"
+      // bg="light"
         sticky="top"
         expand="lg"
         collapseOnSelect
         variant="light"
-        className="py-3"
+        className={navbar ? 'navbar active' : 'navbar'}
       >
         <Container>
           <Navbar.Brand>
@@ -39,7 +50,7 @@ const Header = () => {
             id="basic-navbar-nav"
             className="justify-content-end"
           >
-            <Nav className="ms-auto text-center">
+            <Nav className="ms-auto text-center nav-items">
               <CustomLink className="ms-2 fs-5 link" to="/home">
                 Home
               </CustomLink>

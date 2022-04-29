@@ -1,4 +1,8 @@
-.navbar{
+.navbar {
+  height: 100px;
+}
+
+.navbar.active {
   background: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -14,7 +18,7 @@
   text-decoration: none !important;
 }
 
-.logo{
+.logo {
   width: 10%;
 }
 
@@ -35,41 +39,57 @@
   border-radius: 50%;
 }
 
-.icon{
+.icon {
   font-size: 2rem;
   color: #1b4388;
 }
 
 @media screen and (max-width: 490px) {
+  .nav-items {
+    margin-left: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
   .header nav {
     display: block;
     align-items: center;
+    margin-top: 100px;
   }
   .profile-pic {
     margin: 0.5rem auto;
   }
-  .logo{
+  .logo {
     font-size: 3rem;
   }
 }
 
 @media screen and (min-width: 776px) {
+  .nav-items {
+    margin-left: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
   .profile-pic {
     margin: -1rem 1rem;
   }
-  .logo{
+  .logo {
     width: 10%;
   }
-  .logo{
+  .logo {
     font-size: 4rem;
   }
 }
 
 @media screen and (min-width: 992px) {
+  .nav-items {
+    margin-left: 20px;
+    background: transparent;
+    box-shadow: none;
+  }
   .profile-pic {
     margin: -1rem 1rem;
   }
-  .logo{
+  .logo {
     font-size: 4rem;
   }
 }
